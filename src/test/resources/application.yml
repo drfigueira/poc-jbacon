@@ -1,0 +1,24 @@
+server:
+  port: 1800
+
+spring:
+  properties: test
+  application:
+    name: poc-jbacon
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  datasource:
+    url: jdbc:h2:mem:rating-maker
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  main:
+    allow-bean-definition-overriding: true
